@@ -21,3 +21,12 @@ text-davinci-002:
         body:
             model: "text-davinci-002"
             max_tokens: 512
+
+hello_agent:
+    import: "./flask-agent.yaml"
+    parameters:
+        name: "hello_agent"
+        url: "http://xxx.xxx.xxx.xxx:xxxx/generate"
+        body:
+            model: "hello_agent"
+            max_tokens: 512
