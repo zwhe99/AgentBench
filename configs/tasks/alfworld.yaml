@@ -20,3 +20,19 @@ alfworld-std:
   parameters:
     name: alfworld-std
     split: "standard"
+
+alfworld-dev-norm:
+  module: src.server.tasks.alfworld_norm.ALFWorldNorm
+  parameters:
+    name: alfworld-dev-norm
+    split: "dev"
+    config_path: "src/server/tasks/alfworld_norm/configs/base_config.yaml"
+    prompts_path: "src/server/tasks/alfworld_norm/prompts/alfworld_multiturn_plan_first.json"
+
+alfworld-std-norm:
+  module: src.server.tasks.alfworld_norm.ALFWorldNorm
+  parameters:
+    name: alfworld-std-norm
+    split: "standard"
+    config_path: "src/server/tasks/alfworld_norm/configs/base_config.yaml"
+    prompts_path: "src/server/tasks/alfworld_norm/prompts/alfworld_multiturn_plan_first.json"

@@ -13,3 +13,15 @@ kg-std:
   parameters:
     name: "KnowledgeGraph-std"
     data_file: "data/knowledgegraph/std.json"
+
+kg-dev-norm:
+  module: "src.server.tasks.knowledgegraph_norm.KnowledgeGraphNorm"
+  parameters:
+    name: "KnowledgeGraph-dev-norm"
+    data_file: "data/knowledgegraph/dev.json"
+
+kg-std-norm:
+  module: "src.server.tasks.knowledgegraph_norm.KnowledgeGraphNorm"
+  parameters:
+    name: "KnowledgeGraph-std-norm"
+    data_file: "data/knowledgegraph/std.json"

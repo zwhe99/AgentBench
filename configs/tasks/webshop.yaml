@@ -17,3 +17,17 @@ webshop-std:
     name: webshop-std
     start: 0
     end: 200
+
+webshop-dev-norm:
+  module: src.server.tasks.webshop_docker.WebShop
+  parameters:
+    name: webshop-dev-norm
+    start: 200
+    end: 280
+
+webshop-std-norm:
+  module: src.server.tasks.webshop_docker.WebShop
+  parameters:
+    name: webshop-std-norm
+    start: 0
+    end: 200

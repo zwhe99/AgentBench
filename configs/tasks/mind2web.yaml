@@ -35,3 +35,21 @@ m2w-std:
     data:
       test_split_files:
         test_domain: /root/work/data/data_std/*.json
+
+m2w-dev-norm:
+  module: src.server.tasks.mind2web_norm.Mind2WebNorm
+  parameters:
+    name: "Mind2Web-dev-norm"
+    data:
+      test_split_files:
+        test_domain: /root/work/data/data_dev/*.json
+    llm_prompt: data/mind2web/prompt/llm_prompt_cot_norm.json
+
+m2w-std-norm:
+  module: src.server.tasks.mind2web_norm.Mind2WebNorm
+  parameters:
+    name: "Mind2Web-std-norm"
+    data:
+      test_split_files:
+        test_domain: /root/work/data/data_std/*.json
+    llm_prompt: data/mind2web/prompt/llm_prompt_cot_norm.json

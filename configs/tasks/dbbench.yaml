@@ -13,3 +13,15 @@ dbbench-std:
   parameters:
     name: dbbench-std
     data_file: "data/dbbench/standard.jsonl"
+
+dbbench-dev-norm:
+  module: src.server.tasks.dbbench_norm.DBBenchNorm
+  parameters:
+    name: dbbench-dev-norm
+    data_file: "data/dbbench/dev.jsonl"
+
+dbbench-std-norm:
+  module: src.server.tasks.dbbench_norm.DBBenchNorm
+  parameters:
+    name: dbbench-std-norm
+    data_file: "data/dbbench/standard.jsonl"
