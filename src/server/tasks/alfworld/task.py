@@ -39,6 +39,11 @@ class ALFWorld(Task):
         for _, v in content.items():
             self.data_files.extend(v)
         self.data_files = [os.path.join(self.data_path, file) for file in self.data_files]
+        import random
+        random.seed(0)
+        random.shuffle(self.data_files) # shuffle data in place
+        self.data_files = self.data_files
+
         print(f"> successfully loaded {len(self.data_files)} games")
 
         # other configs
