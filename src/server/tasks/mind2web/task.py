@@ -158,6 +158,7 @@ class Mind2Web(Task):
         self, index: SampleIndex, session: Session
     ) -> TaskSampleExecutionResult:
         sample = self.data[index][0]
+        target = self.data[index][1]
         finish_reason = SampleStatus.COMPLETED
 
         if len(sample["pos_ids"]) == 0:
@@ -206,7 +207,7 @@ class Mind2Web(Task):
             final_prediction = ("", "")
         return TaskSampleExecutionResult(
             status=finish_reason,
-            result={"final_prediction": final_prediction, "outputs": outputs},
+            result={"final_prediction": final_prediction, "outputs": outputs, "step_sr": self.metric([{"final_prediction": final_prediction}], [target])["step_sr"]},
         )
 
     @staticmethod
